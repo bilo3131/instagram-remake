@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Instagram</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="icon" href="img/png/favicon.png">
+    <script src='script.js'></script>
+</head>
+
+<body onload="renderStories(), renderSuggestions()">
+
+    <header>
+        <h1><a href="https://bilal-alac.developerakademie.net/instagram/index.html">Instagram</a></h1>
+        <img class="logo" src="img/png/favicon.png">
+        <nav>
+            <div>
+                <img src="img/png/home.png">
+                <a class="start" href="https://bilal-alac.developerakademie.net/instagram/index.html">Startseite</a>
+            </div>
+            <div>
+                <img src="img/png/search.png">
+                <a href="#search">Suche</a>
+            </div>
+            <div class="hideIcons">
+                <img src="img/png/compass.png">
+                <a href="#discover">Entdecken</a>
+            </div>
+            <div>
+                <img src="img/png/reels.png">
+                <a href="#reels">Reels</a>
+            </div>
+            <div class="hideIcons">
+                <img src="img/png/message.png">
+                <a href="#messages">Nachrichten</a>
+            </div>
+            <div>
+                <img src="img/png/heart.png">
+                <a href="#notifications">Benachrichtigungen</a>
+            </div>
+            <div>
+                <img src="img/png/plus.png">
+                <a href="#create">Erstellen</a>
+            </div>
+            <div class="hideIcons">
+                <img src="img/png/user.png">
+                <a href="#profile">Profil</a>
+            </div>
+            <div class="hideIcons">
+                <img src="img/png/menu.png">
+                <a href="#more">Mehr</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="stories" id="stories">
+            <div class="profile">
+                <img class="roundBorder small" src="img/png/user.png">
+                <span>Selina</span>
+            </div>
+            <div class="profile">
+                <img class="roundBorder small" src="img/womanSmileProfile.jpg">
+                <span>Chayenne</span>
+            </div>
+            <div class="profile">
+                <img class="roundBorder small" src="img/womanShortHairProfile.jpg">
+                <span>Sara</span>
+            </div>
+            <div class="profile">
+                <img class="roundBorder small" src="img/parisProfile.jpg">
+                <span>Lisa</span>
+            </div>
+            <div class="profile">
+                <img class="roundBorder small" src="img/manGlassesProfile.jpg">
+                <span>Jannik</span>
+            </div>
+            <div class="profile">
+                <img class="roundBorder small" src="img/manSmileProfile.jpg">
+                <span>Lukas</span>
+            </div>
+        </div>
+        <div class="posts" id="posts">
+
+        </div>
+    </main>
+
+    <div class="rightSection">
+        <div class="row" id="prfileLink">
+            <div class="rowChild">
+                <img class="roundBorder" src="img/png/user.png">
+                <span>
+                    <p class="name margin0">User</p>
+                    <p class="margin0 grey">Some Text</p>
+                </span>
+            </div>
+            <button>Wechseln</button>
+        </div>
+        <div class="suggestions" id="suggestions">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
