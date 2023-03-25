@@ -123,16 +123,11 @@ load();
 function renderStories() {
     let post = document.getElementById('posts');
     post.innerHTML = '';
-
     for (let i = 0; i < posts.length; i++) {
         const element = posts[i];
-
         post.innerHTML += postsTemplate(element, i);
-
         let comment = document.getElementById(`commentSection${i}`);
-
         for (let j = 0; j < element['comments'].length; j++) {
-
             comment.innerHTML += commentTemplate(element, i, j);
             userComment(i, j);
         }
@@ -146,13 +141,9 @@ function renderStories() {
 function renderSuggestions() {
     let suggestion = document.getElementById('suggestions');
     suggestion.innerHTML = '';
-    suggestion.innerHTML = /*html*/ `
-    <h4>Vorschläge für dich</h4>
-    `;
-
+    suggestion.innerHTML = `<h4>Vorschläge für dich</h4>`;
     for (let i = 0; i < suggestions.length; i++) {
         const element = suggestions[i];
-
         suggestion.innerHTML += suggestionTemplate(element);
     }
 }
@@ -249,7 +240,6 @@ function userComment(i, j) {
 function deleteComment(i, j) {
     posts[i]['comments'].splice(j, 1);
     posts[i]['user'].splice(j, 1);
-
     renderStories();
 }
 
@@ -270,7 +260,6 @@ function saveLikes(element, i) {
 function load() {
     for (let i = 0; i < posts.length; i++) {
         const element = posts[i];
-
         check(element, i);
     }
 }
@@ -285,19 +274,15 @@ function check(element, i) {
 }
 
 function loadComments(element, i) {
-
     let savedComments = localStorage.getItem(`comment${i}`);
     let savedUser = localStorage.getItem(`user${i}`);
-
     element['comments'] = JSON.parse(savedComments);
     element['user'] = JSON.parse(savedUser);
 }
 
 function loadLikes(element, i) {
-
     let savedLikes = localStorage.getItem(`likes${i}`);
     let savedLikesUser = localStorage.getItem(`userLike${i}`);
-
     element['likes'] = JSON.parse(savedLikes);
     element['userLike'] = JSON.parse(savedLikesUser);
 }
